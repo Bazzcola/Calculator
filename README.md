@@ -1,42 +1,16 @@
-я делал следушим образом
 
-1.npx create-react-app my-app
-2.cd my-app
-3.npm i --save-dev prettier
-4.создал файл конфиг prettierrc.json
-{
-    "trailingComma":"none",
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": true
-}
-5.npm i --save-dev eslint-plugin-react
-6.cоздал файл конфиг .eslintrc
-{
-    "plugins": ["react"],
-    "rules": {   
-        "react/jsx-uses-react": "error",   
-        "react/jsx-uses-vars": "error" 
-    }
-}
-7.npm i --save-dev eslint-config-airbnb
-8.npm i --save-dev husky lint-staged
-9.добавил в package.json
-{
-  "lint-staged": {
-    "src/**/*.{js,jsx}": [
-      "eslint . --fix",
-      "git add"
-    ],
-    "*.(js|html|css)": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  }  
-}
-10.начал проверять и вот такая ситуация , потом 
+
+It's very important when all team use a unique style code. That's why we use Prietter and ESLint. We insist that you use them also in your feature projects. The test it's not complicated, but you have to figure out how it works, helps and how to configure it.
+
+## Todo:
+1. Create react application using create-react-app
+2. Add eslint and eslint-config-airbnb
+3. Add prettier and create prettier config (.prettierrc)
+4. Add husky and lint-staged libraries
+
+## Check list:
+1. The project created via create-react-app
+2. The project has eslint and eslint-config-airbnb
+3. The project has prietter and its rules in project
+4. The project uses husky and lint-staged
+5. The project automatically format code using prietter and fix code using eslint on git commit
