@@ -40,7 +40,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "eslint -c .eslintrc --fix"
+      "eslint -c .eslintrc --fix --color"
     ],
     "*.(js|html|css)": [
       "prettier --write"

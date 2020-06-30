@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css'
+import Calculator from './moleculs/Calculator';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div />
+    <Calculator />
   </React.StrictMode>,
 document.getElementById('root')
 );
