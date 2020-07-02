@@ -38,9 +38,7 @@ export function Calculator () {
         if(item === "=") {
             // eslint-disable-next-line
             let x = eval(input);
-            
-            setInput(x);
-            
+            setInput(x); 
         }
         
     }
