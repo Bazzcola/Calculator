@@ -8,7 +8,6 @@ const btn = ['clear', '0', '/', '*', '7', '8', '9', '-', '4', '5', '6', '+', '1'
 // eslint-disable-next-line
 export function Calculator () {
     const [input, setInput] = useState('')
-    
     const addSymbol = (item) => {
         const isValueOperator = ['/', '+','-','*'].includes(input[input.length -1])
         if(!isValueOperator) {
