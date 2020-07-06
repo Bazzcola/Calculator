@@ -16,7 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lerna:lint:js": "lerna run lint:js:fix"
+    "lerna:lint:js": "lerna run lint:js:fix",
+    "format": "npx prettier --write \"src/**/*.{js,jsx,ts,tsx,json,scss}\""
   },
   "browserslist": {
     "production": [
@@ -43,7 +44,8 @@
       "eslint -c .eslintrc --fix --color"
     ],
     "*.(js|html|css)": [
-      "prettier --write"
+      "npx prettier --write -c .prettierrc",
+      "git add"
     ]
   },
   "husky": {
