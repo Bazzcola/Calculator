@@ -7,5 +7,5 @@ Create application for Calculator that will be able to Add, subtract, multiply, 
 3.React Hooks<br>
 4.Atomic Design Pattern (ask your mentor first)<br>
 ## Design examples:
-1.Calculator 1 (https://prnt.sc/t49oxf)<br>
+1.[Calculator 1] (https://prnt.sc/t49oxf)<br>
 2.Calculator 2
