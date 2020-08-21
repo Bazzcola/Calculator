@@ -2,30 +2,31 @@ import React, { useState, useCallback } from 'react';
 import { Button } from '../atoms/Button';
 import './Calculator.css';
 
-const operators = ['/', '+', '-', '*'];
+const operators = ['/', '+', '-', '*', '.'];
 const btn = [
-  'clear',
-  '0',
   '/',
   '*',
+  '.',
+  '+',
+  '-',
+  '0',
   '7',
   '8',
   '9',
-  '-',
   '4',
   '5',
   '6',
-  '+',
   '1',
   '2',
   '3',
+  'clear',
   '='
 ];
 // eslint-disable-next-line
 export function Calculator() {
   const [input, setInput] = useState('');
   const addSymbol = (item) => {
-    const isValueOperator = ['/', '+', '-', '*'].includes(
+    const isValueOperator = ['/', '+', '-', '*', '.'].includes(
       input[input.length - 1]
     );
     if (!isValueOperator) {
@@ -52,9 +53,16 @@ export function Calculator() {
       setInput(input + item);
     }
     if (item === '=') {
-      // eslint-disable-next-line
-      let x = eval(input);
-      setInput(x);
+      try {
+        // eslint-disable-next-line
+        let x = eval(input);
+        setInput(x);
+      } catch (e) {
+        const z = parseInt(input, 10);
+        // eslint-disable-next-line
+        let x = eval(z);
+        setInput(x);
+      }
     }
   };
 
@@ -66,7 +74,7 @@ export function Calculator() {
     <div className="calculator_container">
       <input className="output" value={input} onChange={handleChange} />
       {btn.map((item) => (
-        <Button key={item.id} item={item} handleClick={addSymbol} />
+        <Button key={item} item={item} handleClick={addSymbol} />
       ))}
     </div>
   );

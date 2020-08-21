@@ -8,7 +8,6 @@ export function Button({ item, handleClick }) {
       type="button"
       className="button_area"
       onClick={() => handleClick(item)}
-      onKeyDown={() => handleClick(item)}
     >
       <div className="button">{item}</div>
     </button>

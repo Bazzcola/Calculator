@@ -1,5 +1,5 @@
 .button {
-  width: 150px;
+  width: 100%;
   background: white;
   height: 74px;
   text-align: center;
@@ -8,12 +8,20 @@
   cursor: pointer;
   border-radius: 10px;
 }
+
 .button_area {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  width: 130px;
-  padding: 0px;
+  width: 33%;
+  height: 100px;
+  margin-bottom: 2px;
   border: 2px red solid;
   border-radius: 10px;
   outline: none;
+  padding: 0px;
+}
+
+.button_area:last-child {
+  width: 66%;
 }
